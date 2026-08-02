@@ -1,0 +1,26 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /links/{code} {
+      allow read: if true;
+
+      allow create: if request.resource.data.keys().hasAll(['longUrl', 'clickCount'])
+                    && request.resource.data.longUrl is string
+                    && request.resource.data.clickCount == 0;
+
+      // Only allow the click counter to be incremented, nothing else changed.
+      allow update: if request.resource.data.diff(resource.data).affectedKeys()
+                      .hasOnly(['clickCount']);
+
+      allow delete: if false;
+
+      match /visits/{visitId} {
+        allow read: if true;
+        allow create: if true;
+        allow update, delete: if false;
+      }
+    }
+  }
+}
