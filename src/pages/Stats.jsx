@@ -45,7 +45,7 @@ export default function Stats() {
   return (
     <div className="page">
       <nav className="nav">
-        <Link to="/" className="brand">snip<span className="dot">.</span></Link>
+        <Link to="/" className="brand">zixurl<span className="dot">.</span></Link>
       </nav>
 
       <div className="container">

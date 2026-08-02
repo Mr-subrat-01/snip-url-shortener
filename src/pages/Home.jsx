@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { createShortLink, getLink } from '../lib/links'
 
-const HISTORY_KEY = 'snip_my_codes'
+const HISTORY_KEY = 'zixurl_my_codes'
 
 function loadHistory() {
   try {
@@ -64,7 +64,7 @@ export default function Home() {
   return (
     <div className="page">
       <nav className="nav">
-        <Link to="/" className="brand">snip<span className="dot">.</span></Link>
+        <Link to="/" className="brand">zixurl<span className="dot">.</span></Link>
       </nav>
 
       <div className="container">

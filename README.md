@@ -1,4 +1,4 @@
-# snip — URL shortener
+# zixurl — URL shortener
 
 React + Firebase (Firestore + Hosting). Tracks every click: time, browser,
 OS, referrer, language. No backend server needed — Firestore does the storage,
@@ -8,7 +8,7 @@ Hosting serves the static React app.
 
 1. Go to https://console.firebase.google.com → **Add project**
 2. For the Project ID, try something short — this becomes `NAME.web.app`.
-   Ideas: `snp`, `snpit`, `csnip`, `snip99`, `getsnip`. Project IDs are
+   Ideas: `snp`, `snpit`, `czixurl`, `zixurl99`, `getzixurl`. Project IDs are
    globally unique across ALL Firebase users, so short common words are
    usually already taken — you'll need to try a few.
 3. Skip Google Analytics (not needed).
